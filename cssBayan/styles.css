@@ -76,6 +76,7 @@ h1, h2 {
 	margin-bottom: 2rem;
 	padding-top: 1rem;
 	border-top: 1px solid var(--border-color);
+	cursor: pointer;
 }
 
 .slide__header {
@@ -99,8 +100,9 @@ h1, h2 {
 .slide__img {
 	width: 0;
 	height: 0;
+	max-width: 400px;
 	margin: 0 auto;
-	transition: width 1s;
+	transition: all 0.2s ease-in-out;
 }
 
 .page-footer {
@@ -108,7 +110,7 @@ h1, h2 {
 }
 
 .bayan:hover .slide__icon {
-	fill: var(--text-color);	
+	fill: var(--text-color);
 }
 
 .bayan:hover .slide___title {
@@ -121,9 +123,8 @@ h1, h2 {
 #radio4:checked ~ .slide  > .slide-img-4,
 #radio5:checked ~ .slide  > .slide-img-5 {
 	width: 100%;
-	max-width: 600px;
-	min-width: 250px;
 	height: auto;
+	transition: all 1s ease-in-out;
 }
 
 #radio1:checked ~ .slide > .slide__header > .slide-title-1,
@@ -159,6 +160,10 @@ h1, h2 {
 		font-size: var(--fs-tablet);
 	}
 
+	.slide__img {
+		max-width: 400px;
+	}
+
 	.slide__icon {
 		width: 3%;
 		height: 3%;
@@ -182,12 +187,14 @@ h1, h2 {
 		padding-top: 3rem;
 	}
 
+	.slide__img {
+		max-width: 600px;
+	}
+
 	.slide:hover .slide__img {
 		width: 100%;
-		max-width: 600px;
-		min-width: 250px;
 		height: auto;
-		transition: 1s;
+		transition: all 0.2s ease-in-out;
 	}
 
 	.slide___title {
