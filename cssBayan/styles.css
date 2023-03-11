@@ -70,6 +70,14 @@ h1, h2 {
 	cursor: pointer;
 }
 
+.slide:active {
+	opacity: 0.7;
+}
+
+.bayan .slide:active .slide__icon {
+	fill: var(--blue-color);
+}
+
 .slide__header {
 	display: flex;
 	justify-content: space-between;
@@ -123,8 +131,24 @@ h1, h2 {
 #radio3:checked ~ .slide > .slide__header > .ic-slide-3,
 #radio4:checked ~ .slide > .slide__header > .ic-slide-4,
 #radio5:checked ~ .slide > .slide__header > .ic-slide-5 {
-	transition: all 0.2s ease-in-out;
+	transition: rotate 0.2s ease-in-out;
 	transform: rotate(0deg);
+}
+
+#radio1 ~ .slide:active > .slide__header > .slide-title-1,
+#radio2 ~ .slide:active > .slide__header > .slide-title-2,
+#radio3 ~ .slide:active > .slide__header > .slide-title-3,
+#radio4 ~ .slide:active > .slide__header > .slide-title-4,
+#radio5 ~ .slide:active > .slide__header > .slide-title-5 {
+	color: var(--blue-color);
+}
+
+#radio1:checked ~ .slide:active > .slide__header > .slide__icon,
+#radio2:checked ~ .slide:active > .slide__header > .slide__icon,
+#radio3:checked ~ .slide:active > .slide__header > .slide__icon,
+#radio4:checked ~ .slide:active > .slide__header > .slide__icon,
+#radio5:checked ~ .slide:active > .slide__header > .slide__icon {
+	fill: var(--blue-color);
 }
 
 @media (min-width: 820px) and (max-width: 1920px) {
@@ -173,7 +197,7 @@ h1, h2 {
 	}
 
 	.container {
-		width: 50%;
+		width: 60%;
 	}
 
 	.page-header {
@@ -184,27 +208,15 @@ h1, h2 {
 		padding-top: 3rem;
 	}
 
-	.slide:active {
-		opacity: 0.7;
-	}
-
-	.slide:active .slide__icon {
-		fill: var(--blue-color);
-	}
-
-	.slide:active .slide__title {
-		color: var(--blue-color) !important;
-	}
-
 	.slide:hover .slide__img {
-		width: 20vw;
+		width: 30vw;
 		height: auto;
 		transition: width 0.5s ease-in-out;
 	}
 
 	.slide:hover .slide__icon {
-		transform: rotate(0);
 		transition: transform 0.2s ease;
+		transform: rotate(0);
 	}
 
 	.slide__title {
@@ -221,7 +233,7 @@ h1, h2 {
 	#radio3:checked ~ .slide  > .slide-img-3,
 	#radio4:checked ~ .slide  > .slide-img-4,
 	#radio5:checked ~ .slide  > .slide-img-5 {
-		width: 20vw;
+		width: 30vw;
 	}
 
 	.page-footer {
