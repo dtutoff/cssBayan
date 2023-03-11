@@ -113,7 +113,7 @@ h1, h2 {
 #radio3:checked ~ .slide  > .slide-img-3,
 #radio4:checked ~ .slide  > .slide-img-4,
 #radio5:checked ~ .slide  > .slide-img-5 {
-	width: 50vw;
+	width: 70vw;
 	height: auto;
 	transition: width 0.5s ease-in-out;
 }
@@ -151,7 +151,7 @@ h1, h2 {
 	fill: var(--blue-color);
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (max-width: 1920px) {
 	.bayan:hover .slide__icon {
 		transition: fill 0.2s ease-in-out;
 		fill: var(--text-color);
@@ -160,10 +160,9 @@ h1, h2 {
 	.bayan:hover .slide__header {
 		color: var(--text-color);
 	}
-
 	
 	.slide:hover .slide__img {
-		width: 30vw;
+		width: 70vw;
 		height: auto;
 		transition: width 0.5s ease-in-out;
 	}
@@ -171,6 +170,14 @@ h1, h2 {
 	.slide:hover .slide__icon {
 		transition: transform 0.2s ease;
 		transform: rotate(0);
+	}
+}
+
+@media (hover: hover) and (min-width: 1920px) {
+	.slide:hover .slide__img {
+		width: 40vw;
+		height: auto;
+		transition: width 0.5s ease-in-out;
 	}
 }
 
@@ -236,7 +243,7 @@ h1, h2 {
 	#radio3:checked ~ .slide  > .slide-img-3,
 	#radio4:checked ~ .slide  > .slide-img-4,
 	#radio5:checked ~ .slide  > .slide-img-5 {
-		width: 30vw;
+		width: 40vw;
 	}
 
 	.page-footer {
