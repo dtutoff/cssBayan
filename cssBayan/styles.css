@@ -91,7 +91,7 @@ h1, h2 {
 
 .slide__icon {
 	width: 4%;
-	height: 4%;	
+	height: 4%;
 	transition: fill 0.2s ease-in-out;
 	transform: rotate(45deg);
 	fill: transparent;
